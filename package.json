@@ -1,4 +1,5 @@
 {
+  "homepage":"http://shahin-max.github.io/react-deploy",
   "name": "user-info",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +18,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "start": "react-scripts start",
     "json-server": "json-server --watch db.json --port 3002",
     "start:dev": "concurrently \"npm start\" \"npm run json-server\"",
